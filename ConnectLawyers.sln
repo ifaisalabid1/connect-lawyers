@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectLawyers", "ConnectLawyers.csproj", "{77894D51-AED6-D1C0-EDFF-1BD19255E99E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77894D51-AED6-D1C0-EDFF-1BD19255E99E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77894D51-AED6-D1C0-EDFF-1BD19255E99E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77894D51-AED6-D1C0-EDFF-1BD19255E99E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77894D51-AED6-D1C0-EDFF-1BD19255E99E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82024F25-92CB-4E70-9FCA-DD84DA721B6E}
+	EndGlobalSection
+EndGlobal
