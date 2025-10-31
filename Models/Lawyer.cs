@@ -36,6 +36,6 @@ public class Lawyer
     public DateTime? UpdatedAt { get; set; }
 
     [ForeignKey("LawFirmId")]
-    public Guid? LawFirmId { get; set; }
+    public int? LawFirmId { get; set; }
     public virtual LawFirm? LawFirm { get; set; } = null!;
 }
