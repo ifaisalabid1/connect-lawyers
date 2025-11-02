@@ -32,7 +32,7 @@ public class LawyerDto
     public int YearOfExperience { get; set; } = 0;
     public int? LawFirmId { get; set; }
     public string? LawFirmName { get; set; }
-    public DateTime CreatedAt { get; set; } = DateTime.Now;
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime? UpdatedAt { get; set; }
 }
 
@@ -63,7 +63,7 @@ public class LawyerCreateDto
 
     [Range(0, 100, ErrorMessage = "Year of Experience must be between 0 and 100.")]
     public int YearOfExperience { get; set; } = 0;
-    public DateTime CreatedAt { get; set; } = DateTime.Now;
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 }
 
 public class LawyerUpdateDto
@@ -93,5 +93,5 @@ public class LawyerUpdateDto
     public int YearOfExperience { get; set; } = 0;
 
     public int? LawFirmId { get; set; }
-    public DateTime? UpdatedAt { get; set; } = DateTime.Now;
+    public DateTime? UpdatedAt { get; set; } = DateTime.UtcNow;
 }

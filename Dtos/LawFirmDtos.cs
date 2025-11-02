@@ -26,7 +26,7 @@ public class LawFirmDto
     [MaxLength(255, ErrorMessage = "Name must not be more than 255 characters long.")]
     public required string Email { get; set; }
     public bool IsFeatured { get; set; } = false;
-    public DateTime CreatedAt { get; set; } = DateTime.Now;
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime? UpdatedAt { get; set; }
 }
 
@@ -52,7 +52,7 @@ public class LawFirmCreateDto
     [MaxLength(255, ErrorMessage = "Name must not be more than 255 characters long.")]
     public required string Email { get; set; }
     public bool IsFeatured { get; set; } = false;
-    public DateTime CreatedAt { get; set; } = DateTime.Now;
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 }
 
 public class LawFirmUpdateDto
@@ -77,7 +77,7 @@ public class LawFirmUpdateDto
     [MaxLength(255, ErrorMessage = "Name must not be more than 255 characters long.")]
     public required string Email { get; set; }
     public bool IsFeatured { get; set; } = false;
-    public DateTime? UpdatedAt { get; set; } = DateTime.Now;
+    public DateTime? UpdatedAt { get; set; } = DateTime.UtcNow;
 }
 
 public class LawFirmDetailDto : LawFirmDto
