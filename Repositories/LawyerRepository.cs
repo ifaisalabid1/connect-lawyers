@@ -10,7 +10,7 @@ public class LawyerRepository(AppDbContext context) : BaseRepository<Lawyer>(con
     public async Task<Lawyer?> GetByEmailAsync(string email)
     {
         return await _context.Lawyers
-            .FirstOrDefaultAsync(l => l.Email.Equals(email, StringComparison.CurrentCultureIgnoreCase));
+            .FirstOrDefaultAsync(l => l.Email.ToLower() == email.ToLower());
     }
 
     public async Task<Lawyer?> GetByIdWithLawFirmAsync(int id)

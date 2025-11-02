@@ -24,7 +24,7 @@ public class LawyerService(ILawyerRepository lawyerRepository, ILawyerMapper law
             var createdLawyer = await _lawyerRepository.AddAsync(lawyer);
             var lawyerDto = _lawyerMapper.MapToDto(createdLawyer);
 
-            return ApiResponse<LawyerDto>.Ok(lawyerDto, "Lawyer created successfully.")
+            return ApiResponse<LawyerDto>.Ok(lawyerDto, "Lawyer created successfully.");
         }
         catch (Exception ex)
         {

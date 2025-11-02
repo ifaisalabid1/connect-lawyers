@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ConnectLawyers.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/law-firms")]
 public class LawFirmsController(ILawFirmService lawFirmService) : ControllerBase
 {
     private readonly ILawFirmService _lawFirmService = lawFirmService;
