@@ -34,4 +34,11 @@ public class LawyerRepository(AppDbContext context) : BaseRepository<Lawyer>(con
             .Where(l => l.LawFirmId == lawFirmId)
             .ToListAsync();
     }
+
+    public async Task<IEnumerable<Lawyer>?> GetAllLawyersWithLawFirmAsync()
+    {
+        return await _context.Lawyers
+            .Include(l => l.LawFirm)
+            .ToListAsync();
+    }
 }

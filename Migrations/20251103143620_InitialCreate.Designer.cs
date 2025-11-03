@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ConnectLawyers.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251102193402_InitialCreate2")]
-    partial class InitialCreate2
+    [Migration("20251103143620_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

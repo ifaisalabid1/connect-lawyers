@@ -8,4 +8,6 @@ public interface ILawyerRepository : IRepository<Lawyer>
     Task<Lawyer?> GetByEmailAsync(string email);
     Task<IEnumerable<Lawyer>?> GetFeaturedAsync();
     Task<Lawyer?> GetByIdWithLawFirmAsync(int id);
+    Task<IEnumerable<Lawyer>?> GetAllLawyersWithLawFirmAsync();
+
 }

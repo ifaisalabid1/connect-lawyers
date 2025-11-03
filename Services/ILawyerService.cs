@@ -5,6 +5,7 @@ namespace ConnectLawyers.Services;
 public interface ILawyerService
 {
     Task<ApiResponse<IEnumerable<LawyerDto>>> GetAllLawyersAsync();
+    Task<ApiResponse<IEnumerable<LawyerDto>>> GetAllLawyersWithLawFirmAsync();
     Task<ApiResponse<LawyerDto>> GetLawyerByIdAsync(int id);
     Task<ApiResponse<LawyerDto>> GetLawyerByEmailAsync(string email);
     Task<ApiResponse<LawyerDto>> GetLawyerWithLawFirmAsync(int id);

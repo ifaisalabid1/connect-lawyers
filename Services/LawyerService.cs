@@ -65,6 +65,24 @@ public class LawyerService(ILawyerRepository lawyerRepository, ILawyerMapper law
         }
     }
 
+    public async Task<ApiResponse<IEnumerable<LawyerDto>>> GetAllLawyersWithLawFirmAsync()
+    {
+        try
+        {
+            var lawyers = await _lawyerRepository.GetAllLawyersWithLawFirmAsync();
+            if (lawyers is null)
+            {
+                return ApiResponse<IEnumerable<LawyerDto>>.Fail("Lawyer is not associated with any law firm");
+            }
+            var lawyerDtos = lawyers.Select(_lawyerMapper.MapToDto);
+            return ApiResponse<IEnumerable<LawyerDto>>.Ok(lawyerDtos);
+        }
+        catch (Exception ex)
+        {
+            return ApiResponse<IEnumerable<LawyerDto>>.Fail($"Error retrieving lawyers: {ex.Message}");
+        }
+    }
+
     public async Task<ApiResponse<IEnumerable<LawyerDto>>> GetFeaturedLawyersAsync()
     {
         try

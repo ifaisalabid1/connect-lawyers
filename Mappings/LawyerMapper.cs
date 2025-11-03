@@ -20,7 +20,7 @@ public class LawyerMapper : ILawyerMapper
             IsFeatured = lawyer.IsFeatured,
             YearOfExperience = lawyer.YearOfExperience,
             LawFirmId = lawyer.LawFirmId,
-            LawFirmName = lawyer.LawFirm?.Name ?? string.Empty,
+            LawFirmName = lawyer.LawFirm?.Name,
             CreatedAt = DateTime.UtcNow,
             UpdatedAt = DateTime.UtcNow
         };

@@ -17,6 +17,13 @@ public class LawyersController(ILawyerService lawyerService) : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("with-law-firm")]
+    public async Task<ActionResult<ApiResponse<IEnumerable<LawyerDto>>>> GetLawyersWithLawFirm()
+    {
+        var result = await _lawyerService.GetAllLawyersWithLawFirmAsync();
+        return Ok(result);
+    }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<ApiResponse<LawyerDto>>> GetLawyer(int id)
     {
